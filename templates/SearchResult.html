@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="static/SearchResult.css">
+    <!-- <h2>Query:   {{msg}}</h2> -->
+
+    <div class="navPart">
+
+        <!-- Logo -->
+
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt=""
+            class="googleImage">
+
+        <!-- Search Bar -->
+
+        <div class="SearchBar">
+            <div class="bar">
+                <form action="/SearchresultsAll" method='POST'>
+                    <input class="searchbar" type="text" name="msg" title="Search"
+                        style="text-align: left;padding-left: 60px;">
+                    <div class="searchIcon">
+                        <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </svg>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbarPart2Links">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="images">Images</a></li>
+            <hr>
+
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Paste Api Code here -->
+    <div class="InnerSearchResultDiv">
+
+        <p class="SearchedTakingTime" style=" margin-left: 190px;
+        width: 50vw;">About 10,20,00,000 results(0.76 seconds)</p>
+
+
+
+        <div class="InnerSearchResultImage">
+            <img src="{{data['items'][0]['pagemap']['cse_image'][0]['src']}}" alt="">
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="SearchPage_Results">
+
+        <!---------- 1 --------->
+        <!-- link -->
+        <h2 style="margin-top: 10px;">
+            <li><a href="{{data['items'][0]['link']}}" class="SearchPageResultLink">{{data['items'][0]['link']}}</a>
+            </li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+
+            <li><a href={{data['items'][0]['link']}} style="text-decoration: none;">{{data['items'][0]['title']}}</a>
+            </li>
+        </h2><br>
+
+
+
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][0]['snippet']}}</span>
+
+
+
+
+
+        <!---------- 2 -------->
+        <!-- link -->
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][1]['link']}} class="SearchPageResultLink">{{data['items'][1]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][1]['link']}} style="text-decoration: none;">{{data['items'][1]['title']}}</a>
+            </li>
+        </h2><br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][1]['snippet']}}</span>
+
+
+        <!---------- 3 ---------->
+        <!-- link -->
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][2]['link']}} class="SearchPageResultLink">{{data['items'][2]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][2]['link']}} style="text-decoration: none;">{{data['items'][2]['title']}}</a></li>
+        </h2> <br>
+
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][2]['snippet']}}</span>
+
+
+        <!------------ 3 ---------->
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][3]['link']}} class="SearchPageResultLink">{{data['items'][3]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][3]['link']}}  style="text-decoration: none;">{{data['items'][3]['title']}}</a></li>
+        </h2><br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][3]['snippet']}}</span>
+
+
+        <!-----------4 ---------->
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][4]['link']}} class="SearchPageResultLink">{{data['items'][4]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][4]['link']}}  style="text-decoration: none;"}>{{data['items'][4]['title']}}</a></li>
+        </h2> <br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][4]['snippet']}}</span>
+
+
+        <!---------5 --------->
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][5]['link']}} class="SearchPageResultLink">{{data['items'][5]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][5]['link']}}  style="text-decoration: none;">{{data['items'][5]['title']}}</a></li>
+
+        </h2> <br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][5]['snippet']}}</span>
+
+
+        <!-----------6------->
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][6]['link']}} class="SearchPageResultLink">{{data['items'][6]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][6]['link']}}  style="text-decoration: none;">{{data['items'][6]['title']}}</a></li>
+        </h2><br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][6]['snippet']}}</span>
+
+        <!---------- 7--------->
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][7]['link']}} class="SearchPageResultLink">{{data['items'][7]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][7]['link']}}  style="text-decoration: none;">{{data['items'][7]['title']}}</a></li>
+        </h2> <br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][7]['snippet']}}</span>
+
+
+        <!--------- 8 --------->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][8]['link']}} class="SearchPageResultLink">{{data['items'][8]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#1a0dab;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][8]['link']}}  style="text-decoration: none;">{{data['items'][8]['title']}}</a></li>
+        </h2> <br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][8]['snippet']}}</span>
+
+        <!-------- 9------ -->
+
+        <!-- link -->
+
+        <h2 style="margin-top: 40px;">
+            <li><a href={{data['items'][9]['link']}} class="SearchPageResultLink">{{data['items'][9]['link']}}</a></li>
+        </h2>
+
+        <!-- Searched title -->
+        <h2 style="color:#717075;font-weight: normal;font-family: arial,sans-serif;" class="DisplayTitle">
+            <li><a href={{data['items'][9]['link']}}  style="text-decoration: none;">{{data['items'][6]['link']}}</a></li>
+        </h2> <br>
+
+        <!-- Title Description -->
+        <span style="line-height: 1.58;color: #4d5156;font-size: 14px;margin-top: 5px;">
+            {{data['items'][9]['snippet']}}</span>
+
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- link is here -->
+    <!-- <h2>{{inputText}}</h2> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    
+    <!-- footer -->
+  
+
+    <footer>
+        <ul>
+            <div class="country" style="border-bottom: 1px solid #dadce0;";>
+                <li><a href="#" style="color: rgba(0,0,0,.54);">India</a></li>
+                <br>
+                <br>
+                
+                <!-- <hr style="
+                    margin: 20px -10px; border-bottom: 1px solid #dadce0 !important;
+                }"> -->
+               
+
+            </div>
+           
+
+            <div class="bottom" style="margin-top: 20px !important;">
+                <li><a href="#" class="about">About</a></li>
+
+                <li><a href="#" class="privacy">Privacy</a></li>
+                <li><a href="#" class="terms">Terms</a></li>
+                <li><a href="#" class="setting">Setting</a></li>
+
+            </div>
+
+        </ul>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

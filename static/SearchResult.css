@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navPart{
+    /* background:grey; */
+    /* height: 20vh;  */
+    
+        /* background: #fff; */
+        height: 98px;
+        padding: 0;
+        position: relative;
+        z-index: 126;
+        white-space: nowrap
+}
+
+
+
+
+
+
+/* Searchbar */
+
+.bar{
+    margin-top: -40px;
+     margin-left: 180px;
+     max-width: 700px;
+    height: 50px;
+    outline: none; 
+    border-radius:30px;
+    border:1px solid #dcdcdc;
+    /* position: relative;
+    left: 50%;
+    transform: translate(-50%,50%); */ 
+   
+   
+  }.bar:hover{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+  }
+
+  .bar:focus-within{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+  }
+
+
+  
+  input{
+    /* background: rebeccapurple; */
+    /* margin-left: 30px; */
+   
+    width: 700px;
+    height: 50px;
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+img{
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+  
+    
+}
+
+.searchIcon{
+
+    /* margin: auto; */
+
+
+    margin-top: -38px;
+    /* margin-left: 400px; */
+    margin-left: 660px;
+    height: 25px;
+    width: 25px;
+
+  }
+
+
+.searchIcon svg{
+    display: block;
+    /* background: rebeccapurple; */
+    color: #4285f4;
+height: 100%;
+width: 100%;
+/* color: #9aa0a6; */
+fill: currentColor;
+line-height: 24px
+}
+
+.searchIcon svg:hover{
+  cursor: pointer;
+
+}
+
+
+
+
+
+/* NavbarPart2 */
+
+.navbarPart2Links{
+    /* background: grey; */
+    /* height: 30px; */
+    margin-top: 10px;
+    margin-left: 200px;
+  
+   
+
+}
+
+ul li a{
+    text-decoration: none;
+    /* display: inline-block; */
+}
+
+ul li{
+    list-style: none;
+    display: inline;
+    
+      
+  }
+.images{
+      margin-left: 40px;
+  } 
+
+  hr{
+  
+    
+    width: 120%;
+    
+    margin-top: 14px;
+    margin-left: -200px;
+    color: rgb(255, 250, 250);
+    
+  }
+
+
+  /* RightInfo DIv */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width:400px) {
+   body{
+     /* background: rebeccapurple; */
+     overflow-x: hidden;
+   }
+   
+   hr{
+     width: 120vw;
+   }
+ }
+
+
+/* CSS For SearchResults  */
+/* link */
+
+li{
+  list-style: none;
+ 
+}
+
+
+
+
+.SearchPage_Results{
+  /* background-color: yellow; */
+  margin-left: 190px;
+  width: 50vw;
+}
+ 
+
+.SearchedTakingTime{
+  color: rgb(112, 117, 122);
+  margin-top: 8px;
+  font-size: 0.9rem;
+
+}
+
+
+.SearchPageResultLink{
+font-size: 0.8rem;
+font-weight: normal;
+font-family: arial,sans-serif;
+text-decoration: none;
+color: #a7703d;
+/* background: yellow; */
+
+
+
+}
+
+.DisplayTitle{
+  display: inline-block;
+}
+
+.DisplayTitle:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  /* background: red; */
+  
+
+}
+
+
+
+/* MAX-WIDTH: 500PX */
+
+@media screen and (max-width:600px){
+  body{
+    /* background: rosybrown; */
+  }
+
+  .googleImage{
+  
+    margin-left: 170px;
+    /* background: red; */
+  
+  }
+
+  hr{
+  
+    
+    width: 150%;
+    
+    margin-top: 14px;
+    margin-left: -200px;
+    color: rgb(255, 250, 250);
+    
+  }
+
+
+  /* THIS ONE */
+
+  .bar{
+    /* background: green; */
+    /* margin-left: 20px; */
+    margin-top: 30px;
+    /* width: 40px; */
+    margin-left: 30px;
+     width: 400px;
+    height: 30px;
+  }
+.searchbar{
+  width: 400px;
+    height: 30px;
+}
+
+.searchIcon{
+
+  /* margin: auto; */
+
+
+  margin-top: -27px;
+  /* margin-left: 400px; */
+  margin-left: 360px;
+}
+
+
+  .navbarPart2Links{
+    margin-top: 80px;
+    margin-left: 40px;
+    /* background: yellow; */
+
+  } 
+
+
+  /* SearchResults */
+
+  .SearchedTakingTime{
+    margin-left: 50px !important;
+  } 
+
+  .InnerSearchResultImage > img{
+ 
+    margin-top: 30px !important;
+    margin-right: 160px !important;
+    width: 400px;
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .SearchPage_Results{
+    margin-left: 50px;
+    width: 85%;
+  }
+
+ 
+  
+}
+
+/* ***************** MAX-WIDTH: 481px ************ */
+
+
+@media screen and (min-width: 481px){
+  body{
+    /* background: yellow; */
+  }
+
+  .bar{
+  margin-left: 40px;
+  /* background: red; */
+
+
+   }
+
+   
+
+   .InnerSearchResultImage > img{
+ 
+    margin-top: 30px !important;
+    margin-right: 160px !important;
+    width: 400px;
+    height: 220px;
+    border-radius: 8px;
+  }
+  
+}
+
+@media screen and (min-width: 570px){
+  body{
+    /* background: red; */
+  }
+
+  .googleImage{
+  
+    margin-left: 270px;
+    
+    /* background: red; */
+  
+  }
+  .InnerSearchResultImage > img{
+ 
+    margin-top: 30px !important;
+    margin-right: 160px !important;
+    width: 400px;
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  .bar{
+    width: 500px;
+    height: 30px;
+
+  }
+
+  .searchbar{
+    width: 500px;
+      height: 30px;
+  }
+
+  .searchIcon{
+    margin-left: 450px;
+    margin-top: -28px;
+  }
+
+
+  
+}
+
+
+
+/* NOw this 1: 18pm 20 april */
+
+
+
+/* AFTER MIN- 600px */
+
+
+
+
+@media screen and (min-width: 600px){
+  body{
+    /* background: blue; */
+  }
+
+  
+  .googleImage{
+  
+    margin-left: 280px;
+    
+    /* background: red; */
+  
+  }
+
+  .bar{
+    /* background: green; */
+
+    margin-top: 30px;
+  
+    margin-left: 60px;
+     width: 500px;
+    height: 30px;
+  }
+.searchbar{
+  width: 500px;
+    height: 30px;
+}
+.searchIcon{
+  margin-top: -29px;
+  margin-left: 460px;
+}
+
+
+.InnerSearchResultImage > img{
+
+  float: right;
+  margin-top: 1px;
+  margin-right: 100px !important;
+  width: 400px;
+  height: 220px;
+  border-radius: 8px;
+  
+  }
+
+ .navbarPart2Links{
+  margin-top: 80px;
+  margin-left: 60px;
+  /* background: silver; */
+
+} 
+
+
+.SearchPage_Results{
+  margin-left: 100px;
+}
+
+
+
+
+
+
+
+  
+}
+
+
+
+
+@media screen and (min-width: 650px){
+  body{
+    /* background: springgreen; */
+  }
+
+  .googleImage{
+    margin-left: 350px;
+  }
+
+  .bar{
+    width: 600px;
+    height: 50px;
+
+  }
+
+  .searchbar{
+    width: 690px;
+      height: 50px;
+  }
+
+  .searchIcon{
+    margin-left: 650px;
+    margin-top: -30px;
+  }
+
+
+
+  .InnerSearchResultImage > img{
+    margin-top: -10px !important;
+    margin-right: 20px !important;
+    width: 200px;
+    height: 150px;
+   }
+  
+}
+
+
+
+@media screen and (min-width: 900px){
+  body{
+    /* background: royalblue; */
+  }
+
+  /* .googleImage{
+    margin-top: 20px;
+  } */
+
+  .navPart > img{
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+  
+    
+  }
+  
+
+  /* .bar{
+    margin-left: 200px;
+  } */
+
+
+  .searchbar{
+    height: 40px;
+  }
+.bar{
+  margin-top: -40px;
+   margin-left: 180px;
+   max-width: 700px;
+  height: 40px;
+  outline: none; 
+  border-radius:30px;
+  border:1px solid #dcdcdc;
+ 
+ 
+ 
+}.bar:hover{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline: none;
+}
+
+.bar:focus-within{
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline:none;
+}
+
+.navbarPart2Links{
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+
+.InnerSearchResultImage > img{
+
+  float: right;
+  margin-top: 1px;
+  margin-right: 0px !important;
+  width: 400px;
+  height: 220px;
+  border-radius: 8px;
+  
+  }
+
+  
+.SearchPage_Results{
+  /* background-color: yellow; */
+  margin-left: 190px;
+  width: 50vw;
+}
+
+
+.searchIcon{
+  margin-top: -35px;
+}
+  
+}
+
+
+
+
+
+footer{
+  margin-top: 40px;
+
+
+  bottom: 0;
+   width: 100%;
+    /* background-color:
+     red; */
+      /* color: white; */
+      /* color:yellow; */
+      padding: 15px;
+    
+      background:#f2f2f2;
+      
+      flex-shrink: 0;
+      flex-wrap: wrap;
+}
+
+
+
+.bottom{
+/* border-top: 1px solid grey; */
+ 
+}
+
+
+
+.about{
+margin-left: 20px;
+color: rgba(0,0,0,.54);;
+}
+
+.privacy{
+  margin-left: 100px;
+  color: rgba(0,0,0,.54);;
+
+}
+
+.terms{
+  margin-left: 60px;
+color: rgba(0,0,0,.54);;
+}
+
+.setting{
+  margin-left: 100px;
+  color: rgba(0,0,0,.54);;
+}
+
+
+
+ul li:hover{
+  /* background-color: rebeccapurple; */
+  text-decoration: underline;
+  color: black !important;
+  /* background-color: rebeccapurple; */
+
+}
+
+@media screen and (max-width:510px){
+  body{
+    /* background-color: rebeccapurple; */
+  }
+   .privacy{
+     margin-left: 50px;
+   }
+  .terms{
+    margin-left: 40px !important;
+  }
+  .setting{
+    margin-left: 50px !important;
+  }
+
+
+}

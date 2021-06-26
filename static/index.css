@@ -1,0 +1,529 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-size: 14px;
+font-family: arial,sans-serif;
+color: #222;
+}
+
+.google-image{
+    display: flex;
+     height: 100%;
+    margin-top: auto;
+ 
+position: relative;
+}
+
+.googleBrandImage{
+    max-height: 100%;
+    min-height: 100%;
+max-width: 100%;
+min-width: 100%;
+object-fit: contain;
+object-position: center bottom;
+width: auto;
+}
+
+.outerdiv{
+    /* background-color: rebeccapurple; */
+    margin-top: -27px;
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+@media screen and (min-width: 450px) {
+    body{
+        /* background-color: rebeccapurple; */
+    }
+    .outerdiv{
+        position: relative;
+        left: 50%;
+        /* top: 0; */
+        transform: translate(-50%,50%);
+          /* margin-top: -40px; */
+        /* margin-left: 75px; */ 
+    
+     
+
+        
+    }
+    
+}
+
+
+
+/* links */
+
+ul li a{
+    text-decoration: none;
+    /* background-color: red; */
+    
+}
+
+ul li a:hover{
+    text-decoration: underline;
+
+}
+ul li{
+  list-style: none;
+  display: inline;
+}
+
+
+/* Hardcode Style for loginned Profile */
+.login{
+    /* background-color: rebeccapurple; */
+    margin-right: 15px !important;
+    
+}
+
+/* .innerText{
+    color: whitesmoke;
+    margin-left: 5px;
+    margin-right: 2px;
+
+} */
+
+/* End hard Code Styling */
+
+.inner{
+    /* background-color: rgb(88, 85, 85); */
+    background-color: rgb(59, 56, 56);
+    /* height: 58px; */
+    height: 56px;
+    padding: 5px;
+    color: whitesmoke;
+    border-radius: 5px;
+    width: 192px;
+    opacity: 0.9;
+    margin-left: 18px;
+/* z-index: -3; */
+    
+    font-size: 0.8rem;
+    
+   /* margin-left: 18px;
+   font-size: 0.8rem; */
+}
+
+
+    
+
+
+
+
+
+
+
+/* #AboutInfo{
+    background-color: red;
+    margin-left: 20px !important;
+    color: whitesmoke;
+} */
+
+
+.links{
+    /* background-color: red; */
+  margin-top: 10px;
+    float: right;
+
+}
+
+
+
+
+
+.gmail{
+    margin-right: 10px;
+    color: black;
+}
+.image{
+    /* background-color: red; */
+    margin-right: 15px;
+    color: black;
+}
+
+.symbol{
+    margin-right: 10px;
+
+
+    color: #5f6368 !important;
+opacity: 1;
+cursor: pointer;
+text-decoration: none;
+
+opacity: 1;
+
+background-position: -64px -29px;
+
+padding: 8px;
+
+display: inline-block;
+outline: none;
+vertical-align: middle;
+-moz-border-radius: 2px;
+border-radius: 2px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+height: 40px;
+width: 40px;
+
+font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+}
+
+
+/* LOGIN LINK */
+
+.login{
+    /* background-color: red; */
+    margin-right: 5px;
+    color: black;
+}
+.login:hover{ 
+    text-decoration: underline;
+}
+
+
+span.label {
+    font-family: serif;
+    font-weight: normal;
+}
+
+li a img {
+    margin-right: 15px;
+    border-radius: 300px !important;
+    width: 32px;
+    height: 32px !important;
+    display: inline-block;
+outline: none;
+vertical-align: middle;
+}
+
+
+
+
+.symbol:hover{
+   background-color: #f1f4f8;
+   opacity: 5;
+
+    border-radius: 30px;
+ 
+
+}
+
+
+/* Searchbar */
+.bar{
+    margin-top: 60px;
+    max-width: 600px;
+    height: 50px;
+    outline: none;
+    border-radius:30px;
+    border:1px solid #dcdcdc;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,50%);
+   
+   
+  }.bar:hover{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+  }
+
+  .bar:focus-within{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+  }
+
+
+
+
+
+
+
+    input{
+        /* background: rebeccapurple; */
+        /* margin-left: 30px; */
+       
+        width: 600px;
+        height: 50px;
+        outline: none;
+        border-radius: 30px;
+        border: 1px solid #dcdcdc;
+        font-size: 16px;
+        font-weight: 400;
+        
+
+        
+    }
+
+  
+  .voice{
+    height:20px;
+    position:absolute;
+    top: 10px;
+    left:550px;
+  }
+
+  .searchIcon{
+
+    /* margin: auto; */
+
+
+    margin-top: -35px;
+    margin-left: 20px;
+color: #9aa0a6;
+height: 20px;
+width: 20px;
+
+  }
+
+
+.searchIcon svg{
+    display: block;
+    background: rebeccapurple;
+height: 100%;
+width: 100%;
+color: #9aa0a6;
+fill: currentColor;
+line-height: 24px
+}
+
+
+
+
+  @media screen and (max-width: 600px){
+      body{
+          /* background-color: rebeccapurple; */
+          overflow-x: hidden;
+      }
+      .bar{
+          width: 100%;
+          /* margin-left: -60px; */
+          /* max-width: 600px;
+          height: 40px; */
+
+      }
+          
+      input{
+          width: 100%;
+          /* margin-left: -200px; */
+      }
+      .google-image{
+          width: 200%;
+        
+      }
+      .voice{
+          margin-left: -150px;
+      }
+/* 
+      button{
+          position: absolute;
+        left: 200%;
+        transform: translate(-50%,50%);
+      }
+       */
+      
+      
+  }
+
+
+
+  .ButtonsDiv{
+    margin-top:20px !important;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  button{
+    background-color: #f5f5f5;
+    border:none;
+    color:#707070;
+    font-size:15px;
+    padding: 10px 20px;
+    margin:5px;
+    border-radius:4px;
+    outline:none;
+
+    position: relative;
+    left: 30%;
+    
+    transform: translate(-50%,50%);
+  }
+
+  button:hover{
+    border: 1px solid #c8c8c8;
+    padding: 9px 19px;
+    color:#808080;
+    cursor: pointer;
+  }
+
+  button:focus{
+    border:1px solid #4885ed;
+    padding: 9px 19px;
+  }
+
+
+  .btn2{
+      margin-left: 20px;
+  }
+
+
+  @media screen and (min-width:600px) {
+      body{
+          /* background-color: red; */
+      }
+      .ButtonsDiv{
+        margin-left: 40px;
+        
+      
+      }
+      
+  }
+
+  @media screen and (min-width: 700px){
+      body{
+          /* background-color: orange; */
+      }
+      .ButtonsDiv{
+        margin-left: 100px;
+        
+      
+      }
+
+      
+  }
+
+  @media screen and (min-width: 800px){
+    body{
+        /* background-color: grey; */
+    }
+    .ButtonsDiv{
+      /* margin-left: 110px; */
+      display: flex;
+         
+    }  
+}
+
+
+
+@media screen and (min-width: 900px){
+    body{
+        /* background-color: yellowgreen; */
+    }
+    .ButtonsDiv{
+      margin-left: 130px;
+   
+    }  
+}
+
+
+
+@media screen and (min-width: 1000px){
+    body{
+        /* background-color: whitesmoke; */
+    }
+    .ButtonsDiv{
+      margin-left: 150px;
+   
+    }  
+}
+
+
+@media screen and (min-width: 1000px){
+    body{
+        /* background-color: saddlebrown; */
+    }
+    .ButtonsDiv{
+      margin-left: 200px;
+   
+    }  
+}
+
+@media screen and (min-width: 1100px){
+    body{
+        /* background-color: skyblue; */
+    }
+
+    .ButtonsDiv{
+        margin-left: 250px;
+      } 
+    
+}
+
+
+/* footer */
+
+footer{
+
+    position: fixed; 
+  
+    bottom: 0;
+     width: 100%;
+      /* background-color:
+       red; */
+        /* color: white; */
+        /* color:yellow; */
+        padding: 15px;
+      
+        background:#f2f2f2;
+      
+        
+        flex-shrink: 0;
+        flex-wrap: wrap;
+}
+
+
+
+.bottom{
+/* border-top: 1px solid grey; */
+   
+}
+
+
+
+.about{
+margin-left: 20px;
+color: rgba(0,0,0,.54);;
+
+}
+
+.privacy{
+    margin-left: 100px;
+    color: rgba(0,0,0,.54);;
+   
+
+}
+
+.terms{
+    margin-left: 100px;
+    color: rgba(0,0,0,.54);;
+
+}
+
+.setting{
+    margin-left: 100px;
+    color: rgba(0,0,0,.54);;
+    
+}
+
+@media screen and (max-width:510px){
+    body{
+      /* background-color: rebeccapurple; */
+    }
+    .privacy{
+        margin-left: 50px !important;
+    }
+    .terms{
+      margin-left: 40px !important;
+    }
+    .setting{
+      margin-left: 50px !important;
+    }
+  
+  
+  }

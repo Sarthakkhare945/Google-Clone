@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var googleUser = {};
+        var startApp = function () {
+            gapi.load('auth2', function () {
+
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+
+                auth2 = gapi.auth2.init({
+                    client_id: "700418480879-vmmkgvldvshuj17tmendps8l6bp8c57h.apps.googleusercontent.com",
+                    cookiepolicy: 'single_host_origin',
+
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+
+                });
+                attachSignin(document.getElementById('loginGoogle'));
+            });
+        };
+
+        function attachSignin(element) {
+            console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function (googleUser) {
+
+                    var profile = googleUser.getBasicProfile()
+
+                    //<---- for testing----->
+
+                    // console.log('User is'+ JSON.stringify(profile))
+
+                    // document.getElementById('name').innerText = "Signed in: " +
+
+                    //     googleUser.getBasicProfile().getName();
+                    // console.log('ID' + profile.getId());
+
+                    //<-------- end ------>
+
+
+
+
+                    // IMAGE Url
+                    console.log('Image Url ' + profile.getImageUrl());
+
+
+                    //  Creating Image Element
+
+                    var obj = document.getElementById('loginGoogle');
+                    obj.remove();
+                    var img = document.createElement('img')
+                    img.src = profile.getImageUrl();
+                    var src = document.getElementById('img')
+                    src.appendChild(img);
+
+                    // get Name On hover
+
+                    // var ProfileText = document.createElement('ProfileText').innerHTML = profile.getName();
+
+
+                    // document.getElementById('AboutInfo').innerHTML = ProfileText;
+
+                    // Email
+
+
+                    // var Email = document.createElement('Email').innerHTML = profile.getEmail();
+
+                    // document.getElementById('AboutInfo').innerHTML = profile.getEmail();
+
+
+                    document.getElementById('ProfileText').innerHTML = profile.getName();
+
+                    document.getElementById('Email').innerHTML = profile.getEmail();
+
+
+
+
+
+
+
+                });
+
+
+        }
+
+
+
+    </script>
+
+</head>
+<!-- StyleSheets and Scripts -->
+<link rel="stylesheet" href="static/index.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<script src="https://apis.google.com/js/api:client.js"></script>
+
+<!-- End StyleSheets And Scripts -->
+
+<body>
+
+
+    <div class="links">
+        <div id="gSignInWrapper">
+            <div id="customBtn" class="customGPlusSignIn">
+
+
+                <ul>
+
+                    <li><a href="#" class="gmail">Gmail</a></li>
+                    <li><a href=#"" class="image">Images</a></li>
+
+                    <svg class="symbol" focusable="false" viewBox="0 0 24 24">
+                        <path
+                            d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                        </path>
+                    </svg>
+
+                    <li>
+                        <a href="#" class="login" id='loginGoogle'>Login</a>
+
+
+                    </li>
+
+                    <li>
+                        <a class="img" id="img"
+                            onmouseover="document.getElementById('AboutInfo').style.display='block';"
+                            onmouseout="document.getElementById('AboutInfo').style.display='none';"></a>
+
+                        <!--                         
+                        <div class="onhover" displa>I am from on hover</div> -->
+                    </li>
+
+
+                    <div class="inner" id="AboutInfo" style="display:none;">
+
+                        <div class="Header" id="Header">Google Account</div>
+
+                        <div class="ProfileText" id="ProfileText">
+                        </div>
+
+                        <div class="Email" id="Email" "></div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <script>startApp();</script>
+
+                </ul>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- LOGIN END -->
+
+
+    <br>
+    <br>
+    <div class=" outerdiv" style="z-index: -1 !important;">
+                            <div class="google-image">
+                                <img class="googleBrandImage"
+                                    src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                                    width="272" height="92" style="opacity: 1;" />
+                            </div>
+                        </div>
+
+
+                        <!-- Searchbar -->
+
+                        <style>
+                            :required {
+                                content: 'Eleoe';
+                            }
+                        </style>
+
+                        <div class="bar">
+                            <form action="#" method="POST">
+                                <input class="searchbar" type="text" name="inputText" title="Search" required
+                                    style="text-align: left;padding-left: 60px;"
+                                    oninvalid="this.setCustomValidity('Enter your Search')"
+                                    oninput="this.setCustomValidity('')">
+                                <div class="searchIcon">
+                                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                        </path>
+                                    </svg>
+
+                                </div>
+                                <a href="#"> <img class="voice"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"
+                                        title="Search by Voice"></a>
+                        </div>
+
+                        <!-- buttons -->
+                        <div class="ButtonsDiv">
+                            <button><a href="#"></a>Google Search</a></button>
+
+                            </form>
+                            <button class="btn2">I'am Feeling Lucky</button>
+
+                        </div>
+
+
+
+
+
+
+                        <!-- footer -->
+
+
+                        <footer>
+                            <ul>
+                                <div class="country" style="border-bottom: 1px solid #dadce0;" ;>
+                                    <li><a href="#">India</a></li>
+                                    <br>
+                                    <br>
+
+                                    <!-- <hr style="
+                    margin: 20px -10px; border-bottom: 1px solid #dadce0 !important;
+                }"> -->
+
+
+                                </div>
+
+
+                                <div class="bottom" style="margin-top: 20px !important;">
+                                    <li><a href="#" class="about">About</a></li>
+
+                                    <li><a href="#" class="privacy">Privacy</a></li>
+                                    <li><a href="#" class="terms">Terms</a></li>
+                                    <li><a href="#" class="setting">Setting</a></li>
+
+                                </div>
+
+                            </ul>
+
+                        </footer>
+
+
+
+
+
+
+</body>
+
+</html>
