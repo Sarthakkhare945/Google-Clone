@@ -1,6 +1,6 @@
 # Google-Clone
 
-<p>It's a flask app which has the google search search functionality with SignIn integration in it...</p>
+<p>It's a flask app which has the google search functionality with SignIn integration in it...</p>
 
 Flask
 =====
